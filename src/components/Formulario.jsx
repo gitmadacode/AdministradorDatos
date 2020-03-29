@@ -1,7 +1,9 @@
 import React, { Fragment, useState } from "react";
 import uuid from "uuid/v4";
+import Button from "@material-ui/core/Button";
 
-const Formulario = ({crearCita}) => { //llamamos a la funcion crearCita del componente padre
+const Formulario = ({ crearCita }) => {
+  //llamamos a la funcion crearCita del componente padre
   //Crear State de citas
   const [cita, setCita] = useState({
     mascota: "",
@@ -54,7 +56,7 @@ const Formulario = ({crearCita}) => { //llamamos a la funcion crearCita del comp
       fecha: "",
       hora: "",
       sintomas: ""
-    })
+    });
   };
   return (
     <Fragment>
@@ -109,10 +111,9 @@ const Formulario = ({crearCita}) => { //llamamos a la funcion crearCita del comp
           onChange={actualizarState}
           value={sintomas}
         ></textarea>
-
-        <button type="submit" className="u-full-width button-primary">
+        <Button type="submit" className="u-full-width button-primary">
           Crear contrato
-        </button>
+        </Button>
       </form>
     </Fragment>
   );
